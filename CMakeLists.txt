@@ -38,9 +38,10 @@ SET(CMAKE_CXX_FLAGS "-Wreorder -std=c++17 -fno-rtti -fno-exceptions  " CACHE INT
 
 add_executable(${PROJECT_NAME}.elf main.cpp ${USER_SOURCES})
 target_link_libraries(${PROJECT_NAME}.elf 
-     PRIVATE 
-    fmt::fmt 
-)
+  PRIVATE 
+  fmt::fmt)
 
 add_executable(tests tests/test.cpp)
-target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(tests 
+  PRIVATE
+  Catch2::Catch2WithMain)
