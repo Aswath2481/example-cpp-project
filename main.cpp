@@ -1,6 +1,4 @@
-
-#include <array>
-#include <iostream>
+#include<fmt/format.h>
 int main(){
-    std::cout<<"This program uses "<<__cplusplus<<" Version";
+    fmt::print("This program uses {} Version ",__cplusplus);
 }
